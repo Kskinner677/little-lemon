@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Box, HStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 
 const Header = () => (
@@ -20,9 +21,9 @@ const Header = () => (
             >
             <nav>
                 <HStack spacing={6}>
-                    <a href="/home">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/menu">Menu</a>
+                    <Link to="/">Home</Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/menu">Menu</Link>
                     <a href="reservations">Reservations</a>
                     <a href="/order-online">Order Online</a>
                     <a href="/login">Login</a>
