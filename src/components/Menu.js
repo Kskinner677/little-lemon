@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Avatar, Heading, HStack } from "@chakra-ui/react";
+import { Avatar, Heading, HStack, VStack } from "@chakra-ui/react";
 
 
 const Menu = () => (
@@ -9,9 +9,9 @@ const Menu = () => (
     alignItems="center"
     backgroundColor="#Abc4cc"
   >
-    <HStack>
+    <VStack>
         <Heading as='h1' size="xl">Menu</Heading>
-    </HStack>
+    </VStack>
 </FullScreenSection>
 );
 

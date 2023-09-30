@@ -1,6 +1,6 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Avatar, Heading, HStack } from "@chakra-ui/react";
+import { Image, Heading, HStack, VStack, Box, Text } from "@chakra-ui/react";
 
 
 const HeroSection = () => (
@@ -9,9 +9,10 @@ const HeroSection = () => (
     alignItems="center"
     backgroundColor="#Abc4cb"
   >
-    <HStack>
+    <VStack>
         <Heading as='h1' size="xl">Hero Section</Heading>
-    </HStack>
+        <Text>This is a test</Text>
+    </VStack>
 </FullScreenSection>
 );
 
