@@ -1,11 +1,19 @@
-import React, { useEffect, useRef } from "react";
-import { Box, HStack, Heading, Image } from "@chakra-ui/react";
+import React, { useEffect, useRef, useState } from "react";
+import { Box,
+        HStack,
+        Heading,
+        Image,
+        Button,
+     } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo .svg"
 import Basket from "../assets/Basket.svg"
+import Login from "./Login";
+
 
 const Header = () => (
-    <Heading fontSize={25}>
+
+<Heading fontSize={25}>
     <Box
       position="fixed"
       top={0}
@@ -25,24 +33,25 @@ const Header = () => (
             >
             <nav>
                 <HStack spacing={6}>
-                    <Image src={Logo} alt="logo"/>
+                    <Link to="/"><Image src={Logo} alt="logo"/></Link>
                     <Link to="/">HOME</Link>
                     <Link to="/about">ABOUT</Link>
                     <Link to="/menu">MENU</Link>
-                    <a href="reservations">RESERVATIONS</a>
-                    <a href="/order-online">ORDER ONLINE</a>
+                    <Link to="/reservations">RESERVATIONS</Link>
                 </HStack>
             </nav>
             <nav>
                 <HStack spacing={6}>
-                    <a href="/login">LOG IN</a>
-                    <img src={Basket} />
+                    <Login />
+                    <Link to="/checkout">
+                            <Image src={Basket} alt="basket"/>
+                    </Link>
                 </HStack>
             </nav>
             </HStack>
         </Box>
     </Box>
     </Heading>
-);
+)
 
 export default Header;

@@ -4,10 +4,11 @@ import HomePage from "./components/HomePage";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Reservations from "./components/Revervations";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import '@fontsource/markazi-text/700.css';
 import '@fontsource/karla/600.css';
-
+import Checkout from "./components/Checkout";
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
               <Route index element={<HomePage />} />
               <Route path="menu" element={<Menu />}/>
               <Route path="about" element={<About />}/>
+              <Route path="reservations" element={<Reservations/>}/>
+              <Route path="checkout" element={<Checkout/>}/>
             </Routes>
           <Footer />
         </main>
