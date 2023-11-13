@@ -1,7 +1,7 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Image, Heading, HStack, VStack, Box, Text, Button, ButtonGroup } from "@chakra-ui/react";
-import backgroundImage1 from "../assets/Mario-and-Adrian-b.jpg"
+import img1 from "../assets/restaurant.jpg"
 
 const restuaruantName = "Little Lemon";
 const restuaruantLocation = "Chicago";
@@ -9,7 +9,7 @@ const sampleText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 
 const HeroSection = () => (
 
-    <VStack
+    <FullScreenSection
       maxWidth="auto"
       minHeight="100vh"
       justifyContent="center"
@@ -23,19 +23,24 @@ const HeroSection = () => (
         >
           <Box>
             <Heading as='h1' size="4xl">{restuaruantName}</Heading>
-            <Heading as='h1' size="2xl">{restuaruantLocation}</Heading>
+            <Heading as='h1' size="2xl" color="brand.highlight.dark">{restuaruantLocation}</Heading>
             <Text>{sampleText}</Text>
           </Box>
-          <Box>
-            <Image src={backgroundImage1}></Image>
-          </Box>
+            <Image 
+            objectFit='cover'
+            boxSize="600px"
+            src={img1}
+            alt="restaurant"
+            />
         </HStack>
-        <ButtonGroup alignItems="center" justifyContent="center" gap='4'>
-          <Button colorScheme='whiteAlpha'>ORDER ONLINE</Button>
-          <Text>or</Text>
-          <Button colorScheme='blackAlpha'>RESERVE A TABLE</Button>
-        </ButtonGroup>
-    </VStack>
+        <Box pt={6}>
+          <ButtonGroup alignItems="center" justifyContent="center" gap='4'>
+            <Button colorScheme='whiteAlpha'>ORDER ONLINE</Button>
+            <Text> or </Text>
+            <Button colorScheme='blackAlpha'>RESERVE A TABLE</Button>
+          </ButtonGroup>
+        </Box>
+    </FullScreenSection>
 
 );
 
